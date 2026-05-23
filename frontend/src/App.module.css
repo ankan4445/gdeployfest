@@ -1,0 +1,435 @@
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+.page {
+  width: 100%;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.headerIcon { font-size: 2rem; line-height: 1; }
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 0.825rem;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* ── Form ────────────────────────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section { display: flex; flex-direction: column; gap: 10px; }
+
+.sectionLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+}
+
+/* Mock email cards */
+.mockGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mockCard {
+  text-align: left;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mockCard:hover { border-color: #a5b4fc; background: #f5f3ff; }
+
+.mockCardActive {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.mockLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.mockScenario {
+  font-size: 0.775rem;
+  color: #6b7280;
+}
+
+.mockOutcome {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.825rem;
+  font-family: "SF Mono", "Fira Code", Consolas, monospace;
+  line-height: 1.55;
+  color: #374151;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.errorMsg {
+  font-size: 0.85rem;
+  color: #dc2626;
+  background: #fef2f2;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.primaryBtn {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.primaryBtn:hover:not(:disabled) { background: #4338ca; }
+.primaryBtn:active:not(:disabled) { transform: scale(0.98); }
+.primaryBtn:disabled { background: #a5b4fc; cursor: not-allowed; }
+
+/* ── Loading ─────────────────────────────────────────────────────────────── */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 48px 0;
+}
+
+.bigSpinner {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loadingTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.loadingSubtitle {
+  font-size: 0.825rem;
+  color: #9ca3af;
+}
+
+/* ── Result ──────────────────────────────────────────────────────────────── */
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Decision banner */
+.decisionBanner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  padding: 18px 20px;
+}
+
+.decisionIcon {
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.decisionText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.decisionLabel {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.urgencyPill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.urgencyDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Section header */
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+/* Extracted fields grid */
+.fieldsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #e5e7eb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fieldCell {
+  background: #fff;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fieldKey {
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+}
+
+.fieldVal {
+  font-size: 0.9rem;
+  color: #111827;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.impactNote {
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  line-height: 1.55;
+}
+
+/* Validation check counts */
+.checkCounts {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+
+.countPass  { color: #16a34a; }
+.countWarn  { color: #d97706; }
+.countFail  { color: #dc2626; }
+
+/* Validation table */
+.validationTable {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.validationRow {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.validationHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.statusIcon {
+  font-size: 0.85rem;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.criterionName {
+  flex: 1;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.statusLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.chevron {
+  font-size: 0.65rem;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+.validationDetail {
+  padding: 0 14px 13px 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.validationFinding {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.55;
+}
+
+.validationAction {
+  font-size: 0.825rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+/* Summary */
+.summaryText {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.65;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+/* Next steps */
+.nextStepsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  counter-reset: steps;
+}
+
+.nextStepItem {
+  counter-increment: steps;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.55;
+  padding: 10px 14px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.nextStepItem::before {
+  content: counter(steps);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6366f1;
+  background: #eef2ff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Reset */
+.resetBtn {
+  background: none;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.resetBtn:hover { background: #f3f4f6; color: #374151; }

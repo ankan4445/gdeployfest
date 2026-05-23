@@ -1,0 +1,12 @@
+# Never send to Docker build context
+.git
+.env
+*.md
+
+# Backend build artifacts (built inside Docker)
+dist/
+node_modules/
+
+# Frontend build artifacts (built inside Docker)
+frontend/dist/
+frontend/node_modules/

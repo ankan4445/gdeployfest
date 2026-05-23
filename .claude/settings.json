@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\examples\")",
+      "Read(//c/git-personal/googledeployfest/backend/**)",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\backend\\\\src\")",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\backend\\\\src\\\\agent\")",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\backend\\\\src\\\\routes\")",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\examples\\\\vacation-planner\")",
+      "Read(//c/git-personal/googledeployfest/examples/vacation-planner/**)",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\examples\\\\vacation-planner\\\\src\")",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\examples\\\\vacation-planner\\\\src\\\\flows\")",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\examples\\\\vacation-planner\\\\src\\\\agents\")",
+      "Read(//c/git-personal/googledeployfest/**)",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\analyzer\\\\src\")",
+      "Bash(dir \"c:\\\\git-personal\\\\googledeployfest\\\\analyzer\\\\src\\\\agents\")",
+      "Bash(dir -la \"c:\\\\git-personal\\\\gdeployfest\")",
+      "Bash(dir \"c:\\\\git-personal\\\\gdeployfest\\\\.claude\")",
+      "Bash(npm run *)",
+      "Bash(Set-Location \"c:\\\\git-personal\\\\gdeployfest\\\\frontend\")",
+      "Bash(npm --prefix \"c:/git-personal/gdeployfest/frontend\" install)",
+      "Bash(npm --prefix \"c:/git-personal/gdeployfest/frontend\" run typecheck)",
+      "Bash(gcloud version *)",
+      "Bash(powershell.exe -Command \"gcloud version 2>&1 | Select-Object -First 3\")",
+      "Bash(powershell.exe -Command \"gcloud config get-value project; gcloud auth list --format='value\\(account\\)' 2>&1 | Select-Object -First 1\")",
+      "Bash(powershell.exe -Command \"gcloud services enable run.googleapis.com cloudbuild.googleapis.com --project deployfest-497207 --quiet 2>&1\")",
+      "Bash(powershell.exe -Command ' *)",
+      "Bash(powershell.exe -Command \"Invoke-RestMethod -Uri 'https://gdeployfest-187853541252.us-central1.run.app/health' | ConvertTo-Json\")"
+    ]
+  }
+}
